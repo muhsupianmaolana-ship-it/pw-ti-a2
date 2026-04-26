@@ -9,6 +9,21 @@ if(isset($_POST['angka'])){
     for($i = 1; $i <= $data; $i++){
         echo "angka $i <br>";
     }
-
 }
+?>
+
+//looping while dan do-while
+
+<?php 
+echo "<br> *ini perulangan while* ";
+
+if (isset($_POST['angka'])){
+    $data = $_POST['angka'];
+    $i = 1;
+    while($i <= $data){
+        echo "angka $i <br>";
+        $i++;
+    }
+}
+
 ?>

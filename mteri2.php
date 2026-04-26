@@ -27,3 +27,19 @@ if (isset($_POST['angka'])){
 }
 
 ?>
+
+//looping do-while
+
+<?php
+echo "<br> ini perulangan do while";
+
+if (isset($_POST["angka"])) {
+    $data = $_POST["angka"];
+    $i = 1;
+
+    do {
+        echo "angka $i<br>";
+        $i++;
+    } while ($i <= $data);
+}
+?>

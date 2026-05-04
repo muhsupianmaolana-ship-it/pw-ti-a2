@@ -156,3 +156,22 @@ function bagi(int $a, int $b)
     }
     ?>
 </div>
+
+
+<?php
+echo "<br><br>========================================================<br></br>";
+
+function login ($username, $password)
+{
+    if ($username == "admin" && $password == "admin123") {
+        return "Login Berhasil";
+    } else {
+        return "Login Gagal";
+    }
+}
+if(isset($_POST["username"]) && isset($_POST["password"])){
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    echo login($username, $password);
+}
+?>

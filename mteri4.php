@@ -119,3 +119,20 @@ if(isset($_POST["kirim"])){
     }
     ?>
 </table>
+
+<?php
+if(isset($_GET["edit"])){
+    $id = $_POST['id'];
+    $Username = $_POST['Username'];
+    $Pasword  = $_POST['Pasword'];
+    $nama     = $_POST['nama'];
+    $email    = $_POST['email'];
+    $query = "UPDATE user SET Username='$Username', Pasword='$Pasword', nama='$nama', email='$email' WHERE ID='$id'";
+    
+    if ($query) {
+        echo "Data berhasil diupdate";
+    } else {
+        echo " Data gagal diupdate";  
+    }
+}
+?>
